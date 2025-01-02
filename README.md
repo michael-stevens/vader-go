@@ -11,9 +11,14 @@ Based on research from
 ## Usage
 
 ```go
-import "github.com/grassmudhorses/vader-go/sentitext"
+	
+
+import (
+    "github.com/grassmudhorses/vader-go/lexicon"
+    "github.com/grassmudhorses/vader-go/sentitext"
+)
 ...
-vader := sentitext.PolarityScore("Hello World 💕 I Love the World!")
+vader := sentitext.PolarityScore(sentitext.Parse("Hello World 💕 I Love the World!", lexicon.DefaultLexicon))
 ```
 ## Development
 
